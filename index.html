@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>实验3 网页布局-直接添加图片</title>
+		<style>
+			/* 清除页面的内边距和外边距 */
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/* 最外层盒子样式 */
+			.main{
+				width: 100%;/* 宽度100% */
+				height: auto;/* 高度自适应 */
+				margin: 0 auto;/* 水平居中 */
+				overflow-x: auto;/* 显示x轴的滚动条 */
+				white-space:nowrap;/* 内容显示在一行 */
+				font-size: 0;/* 文字为0,为了清除边距 */
+			}
+			/* 内层盒子 */
+			.main .item{
+				display: inline-block;/* 内容显示在父盒子一行内 */
+				width: 100%;/* 宽100% */
+				height: 100%;/* 高100% */
+				background: #0701a1;/* 背景颜色 */
+			}
+			/* 内层盒子图片比例 */
+			.main .item img{
+				float: left;/* 向左侧浮动对齐 */
+				width: 50%;/* 宽度为盒子的50%宽度 */
+			}
+			.main .item2{
+				background: #6b0304;/* 第二屏幕背景色号 */
+			}
+			.main .item3{
+				background: #000000;/* 第三屏幕背景色号 */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<!-- 第一屏幕内容 -->
+			<div class="item">
+				<img src="images/img1.png" />
+				<img src="images/img2.png" />
+				<img src="images/img3.png" />
+				<img src="images/img4.png" />
+			</div>
+			<!-- 第二屏幕内容 -->
+			<div class="item item2">
+				<img src="images/img5.png" />
+				<img src="images/img6.png" />
+				<img src="images/img7.png" />
+				<img src="images/img8.png" />
+			</div>
+			<!-- 第三屏幕内容 -->
+			<div class="item item3">
+				<img src="images/img9.png" />
+				<img src="images/img10.png" />
+				<img src="images/img11.png" />
+				<img src="images/img12.png" />
+			</div>
+		</div>
+	</body>
+</html>
